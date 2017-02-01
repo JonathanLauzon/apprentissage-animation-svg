@@ -84,7 +84,10 @@
     width: 100%;
     align-items: center;
     height: 250px;
-    font-size: 200px;
+    font-size: 50px;
+  }
+  main div:nth-child(even) {
+    background-color: rgba(102, 102, 255, 0.8);
   }
   main div:nth-child(even) article:nth-child(1) {
     background-color: rgba(102, 102, 255, 0.8);
@@ -100,6 +103,9 @@
   }
   main div:nth-child(even) article:nth-child(5) {
     background-color: rgba(102, 102, 255, 0.8);
+  }
+  main div:nth-child(odd) {
+    background-color: rgba(102, 255, 102, 0.8);
   }
   main div:nth-child(odd) article:nth-child(1) {
     background-color: rgba(102, 255, 102, 0.8);
@@ -170,6 +176,9 @@
   main section,
   footer .desktop-centered {
     width: 960px;
+  }
+  main section article {
+    font-size: 200px;
   }
   header {
     flex-direction: row;

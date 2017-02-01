@@ -23,7 +23,12 @@ main section {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
+  font-size
 }
 footer {
   justify-content: space-around;
+}
+
+main section article {
+  font-size: 100px;
 }

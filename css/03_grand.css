@@ -3,6 +3,9 @@ main section,
 footer .desktop-centered {
   width: 960px;
 }
+main section article {
+  font-size: 200px;
+}
 header {
   flex-direction: row;
   justify-content: space-between;
