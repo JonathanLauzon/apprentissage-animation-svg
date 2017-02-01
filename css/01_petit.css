@@ -9,11 +9,11 @@
   flex-direction: row;
   justify-content: center;
 }
-.global:first-child {
-  background-color: rgba(0, 0, 0, 0.8);
+header:first-child {
+  background-color: rgba(0, 0, 0, 0.9);
 }
-.global:last-child {
-  background-color: rgba(0, 0, 0, 0.6);
+footer:last-child {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 body {
   display: flex;
@@ -24,7 +24,7 @@ body {
 }
 header,
 footer {
-  background-color: #000000;
+  background-color: #ffffff;
 }
 header {
   display: flex;
@@ -85,34 +85,34 @@ main section article {
   font-size: 200px;
 }
 main div:nth-child(even) article:nth-child(1) {
-  background-color: rgba(227, 212, 127, 0.8);
+  background-color: rgba(102, 102, 255, 0.8);
 }
 main div:nth-child(even) article:nth-child(2) {
-  background-color: rgba(127, 202, 227, 0.8);
+  background-color: rgba(102, 255, 102, 0.8);
 }
 main div:nth-child(even) article:nth-child(3) {
-  background-color: rgba(227, 127, 162, 0.8);
+  background-color: rgba(255, 102, 102, 0.8);
 }
 main div:nth-child(even) article:nth-child(4) {
-  background-color: rgba(127, 202, 227, 0.8);
+  background-color: rgba(102, 255, 102, 0.8);
 }
 main div:nth-child(even) article:nth-child(5) {
-  background-color: rgba(227, 212, 127, 0.8);
+  background-color: rgba(102, 102, 255, 0.8);
 }
 main div:nth-child(odd) article:nth-child(1) {
-  background-color: rgba(227, 127, 162, 0.8);
+  background-color: rgba(102, 255, 102, 0.8);
 }
 main div:nth-child(odd) article:nth-child(2) {
-  background-color: rgba(127, 227, 132, 0.8);
+  background-color: rgba(255, 102, 102, 0.8);
 }
 main div:nth-child(odd) article:nth-child(3) {
-  background-color: rgba(172, 127, 227, 0.8);
+  background-color: rgba(102, 102, 255, 0.8);
 }
 main div:nth-child(odd) article:nth-child(4) {
-  background-color: rgba(127, 227, 132, 0.8);
+  background-color: rgba(255, 102, 102, 0.8);
 }
 main div:nth-child(odd) article:nth-child(5) {
-  background-color: rgba(227, 127, 162, 0.8);
+  background-color: rgba(102, 255, 102, 0.8);
 }
 footer {
   height: 70px;
@@ -129,5 +129,5 @@ footer div i {
   transition: color 1s;
 }
 footer div i:hover {
-  color: #7f8ee3;
+  color: #ffff66;
 }
