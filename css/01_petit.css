@@ -3,10 +3,24 @@
 
 * {border: 1px solid #aaa;}
 */
+.global {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.global:first-child {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.global:last-child {
+  background-color: rgba(0, 0, 0, 0.6);
+}
 body {
   display: flex;
   flex-direction: column;
   font-family: arial;
+  background-image: url("../images/parcautomne.jpg");
+  background-attachment: fixed;
 }
 header,
 footer {
@@ -68,25 +82,37 @@ main section article {
   width: 100%;
   align-items: center;
   height: 250px;
-  font-size: 250px;
+  font-size: 200px;
 }
-main section:nth-child(even) article:nth-child(1) {
-  background-color: #e3d47f;
+main div:nth-child(even) article:nth-child(1) {
+  background-color: rgba(227, 212, 127, 0.8);
 }
-main section:nth-child(even) article:nth-child(2) {
-  background-color: #d47fe3;
+main div:nth-child(even) article:nth-child(2) {
+  background-color: rgba(127, 202, 227, 0.8);
 }
-main section:nth-child(even) article:nth-child(3) {
-  background-color: #7fe3d4;
+main div:nth-child(even) article:nth-child(3) {
+  background-color: rgba(227, 127, 162, 0.8);
 }
-main section:nth-child(odd) article:nth-child(1) {
-  background-color: #dbaab1;
+main div:nth-child(even) article:nth-child(4) {
+  background-color: rgba(127, 202, 227, 0.8);
 }
-main section:nth-child(odd) article:nth-child(2) {
-  background-color: #b1dca9;
+main div:nth-child(even) article:nth-child(5) {
+  background-color: rgba(227, 212, 127, 0.8);
 }
-main section:nth-child(odd) article:nth-child(3) {
-  background-color: #b1b1b1;
+main div:nth-child(odd) article:nth-child(1) {
+  background-color: rgba(227, 127, 162, 0.8);
+}
+main div:nth-child(odd) article:nth-child(2) {
+  background-color: rgba(127, 227, 132, 0.8);
+}
+main div:nth-child(odd) article:nth-child(3) {
+  background-color: rgba(172, 127, 227, 0.8);
+}
+main div:nth-child(odd) article:nth-child(4) {
+  background-color: rgba(127, 227, 132, 0.8);
+}
+main div:nth-child(odd) article:nth-child(5) {
+  background-color: rgba(227, 127, 162, 0.8);
 }
 footer {
   height: 70px;

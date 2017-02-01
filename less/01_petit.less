@@ -4,6 +4,7 @@
 @couleur-icone : #f9d42a;
 @couleur-lienMenu : #fff;
 @couleur-base       : #e3d47f;
+@couleur-base2 : fade(@couleur-base, 80%);
 @couleur-complementaire : spin(@couleur-base, 180);
 // @couleur-contrast : contrast(@couleur-base);
 @couleur-contrast : contrast(@couleur-base);
@@ -12,6 +13,10 @@
 @triadic-1 : spin(@couleur-base , -(360 / 3));
 @triadic-2 : spin(@couleur-base , (360 / 3));
 
+@quintadic-1 : spin(@couleur-base2, (360 / 5));
+@quintadic-2 : spin(@couleur-base2, (360 / 5) *2);
+@quintadic-3 : spin(@couleur-base2, (360 / 5) *3);
+@quintadic-4 : spin(@couleur-base2, (360 / 5) *4);
 
 @couleur-1 : saturate(@couleur-complementaire, 10%);
 @couleur-2 : desaturate(@couleur-complementaire, 10%);
@@ -38,12 +43,27 @@
 
 
 
+.global {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
+.global:first-child {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.global:last-child {
+  background-color: rgba(0, 0, 0, 0.6);
+}
 
 body{
   display : flex;
   flex-direction: column;
   font-family: arial;
+  background-image: url("../images/parcautomne.jpg");
+  background-attachment: fixed;
 }
 
 header, footer {
@@ -110,19 +130,23 @@ main{
         align-items: center;
         height : @largeur_article;
        // border: 1px solid #aaa;
-        font-size: @largeur_article;
+        font-size: 200px;
       }
+    }
 
-      &:nth-child(even) {
-          article:nth-child(1) {background-color: @couleur-base;}
-          article:nth-child(2) {background-color: @triadic-1;}
-          article:nth-child(3) {background-color: @triadic-2;}
-      }
-      &:nth-child(odd) {
-          article:nth-child(1) {background-color: @couleur-8;}
-          article:nth-child(2) {background-color: @couleur-9;}
-          article:nth-child(3) {background-color: @couleur-10;}
-      }
+    & div:nth-child(even)  {
+        article:nth-child(1) {background-color: @couleur-base2;}
+        article:nth-child(2) {background-color: @quintadic-2;}
+        article:nth-child(3) {background-color: @quintadic-4;}
+        article:nth-child(4) {background-color: @quintadic-2;}
+        article:nth-child(5) {background-color: @couleur-base2;}
+    }
+    & div:nth-child(odd) {
+        article:nth-child(1) {background-color: @quintadic-4;}
+        article:nth-child(2) {background-color: @quintadic-1;}
+        article:nth-child(3) {background-color: @quintadic-3;}
+        article:nth-child(4) {background-color: @quintadic-1;}
+        article:nth-child(5) {background-color: @quintadic-4;}
     }
 }
 
