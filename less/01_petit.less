@@ -11,8 +11,8 @@
 @couleur-contrast : contrast(@couleur-base);
 
 //Les triadic sont faites à partir de la couleur de base qui est maintenant moins opaque.
-@triadic-1 : spin(@couleur-base-2 , -(360 / 3));
-@triadic-2 : spin(@couleur-base-2 , (360 / 3));
+@triadic-1 : spin(@couleur-base , -(360 / 3));
+@triadic-2 : spin(@couleur-base , (360 / 3));
 
 @couleur-1 : saturate(@couleur-complementaire, 10%);
 @couleur-2 : desaturate(@couleur-complementaire, 10%);
@@ -37,7 +37,24 @@
 
 
 
+main {
+  opacity: 0.9;
+}
 
+header .desktop-centered,
+main section,
+main section article,
+footer .desktop-centered {
+  width: 100%;
+}
+
+footer .desktop-centered {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .global {
   width: 100%;
@@ -131,18 +148,18 @@ main{
     }
 
     & div:nth-child(even)  {
-        background-color: @couleur-base-2;
-        article:nth-child(1) {background-color: @couleur-base-2;}
+        background-color: @couleur-base;
+        article:nth-child(1) {background-color: @couleur-base;}
         article:nth-child(2) {background-color: @triadic-1;}
         article:nth-child(3) {background-color: @triadic-2}
         article:nth-child(4) {background-color: @triadic-1;}
-        article:nth-child(5) {background-color: @couleur-base-2;}
+        article:nth-child(5) {background-color: @couleur-base;}
     }
     & div:nth-child(odd) {
         background-color: @triadic-1;
         article:nth-child(1) {background-color: @triadic-1;}
         article:nth-child(2) {background-color: @triadic-2;}
-        article:nth-child(3) {background-color: @couleur-base-2}
+        article:nth-child(3) {background-color: @couleur-base}
         article:nth-child(4) {background-color: @triadic-2;}
         article:nth-child(5) {background-color: @triadic-1;}
     }

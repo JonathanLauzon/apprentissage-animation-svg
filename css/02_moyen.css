@@ -1,4 +1,19 @@
 /* Un premier media query pour le logo - apparaît en mode paysage sur les mobiles */
+header .desktop-centered,
+main section,
+footer .desktop-centered {
+  width: 100%;
+}
+header .desktop-centered {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+header .desktop-centered img {
+  max-width: 33vw;
+}
 header img {
   /* width : 352px; dimension de l'image */
   width: 352px;
@@ -23,12 +38,10 @@ main section {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  font-size
+}
+main section article {
+  font-size: 100px;
 }
 footer {
   justify-content: space-around;
-}
-
-main section article {
-  font-size: 100px;
 }

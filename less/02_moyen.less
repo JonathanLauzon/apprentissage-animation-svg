@@ -1,5 +1,21 @@
 /* Un premier media query pour le logo - apparaît en mode paysage sur les mobiles */
 
+header .desktop-centered,
+main section,
+footer .desktop-centered {
+  width: 100%;
+}
+
+header .desktop-centered {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+header .desktop-centered img{
+  max-width: 33vw;
+}
 
 header{
 
@@ -40,7 +56,7 @@ header{
         justify-content : flex-start;
        
       article{
-
+        font-size: 100px;
       }
 
     }
