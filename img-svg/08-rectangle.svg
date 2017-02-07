@@ -4,7 +4,7 @@
 <svg width="120px" height="120px" xml:lang="fr"
 xmlns="http://www.w3.org/2000/svg"
 xmlns:xlink="http://www.w3.org/1999/xlink">
-	<title>Ligne SVG</title>
-	<desc>Une ligne en SVG</desc>
-	<line x1="10" y1="10" x2="110" y2="110" stroke="red" />
+	<title>Rectangle SVG</title>
+	<desc>Un rectangle en SVG</desc>
+	<rect x="10" y="35" width="100" height="50" fill="red" stroke="black" />
 </svg>
