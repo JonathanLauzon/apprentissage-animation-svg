@@ -10,6 +10,7 @@ svg[class^= "svgtrans"] path {
 	stroke: #000;
 	stroke-linecap: round;
 	stroke-linejoin: round;
+	-webkit-transition: 0.2s;
 	transition: 0.2s;
 }
 
@@ -36,7 +37,14 @@ svg[class^= "svgtrans"] path {
 
 .svganim-1 {
 	stroke-dasharray: 2;
-	animation: tourniquet 5s linear infinite;
+	-webkit-animation: tourniquet 5s linear infinite;
+	        animation: tourniquet 5s linear infinite;
+}
+
+@-webkit-keyframes tourniquet {
+	to {
+		stroke-dashoffset: 1000;
+	}
 }
 
 @keyframes tourniquet {
@@ -48,7 +56,17 @@ svg[class^= "svgtrans"] path {
 .svganim-2 {
 	stroke-dasharray: 26;
 	stroke-dashoffset: 26;
-	animation: contour 5s linear alternate infinite;
+	-webkit-animation: contour 5s linear alternate infinite;
+	        animation: contour 5s linear alternate infinite;
+}
+
+@-webkit-keyframes contour {
+	from {
+		stroke-dashoffset: 26;
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
 }
 
 @keyframes contour {
@@ -66,7 +84,17 @@ svg[class^= "svgtrans"] path {
 	stroke-linecap: round;
 	stroke-linejoin: round;
 	d: path("M2,2 L8,8");
-	animation: deplacement 1s linear alternate infinite;
+	-webkit-animation: deplacement 1s linear alternate infinite;
+	        animation: deplacement 1s linear alternate infinite;
+}
+
+@-webkit-keyframes deplacement {
+	from {
+		d: path("M2,2 L8,8");
+	}
+	to {
+		d: path("M8,2 L2,8");
+	}
 }
 
 @keyframes deplacement {
@@ -84,7 +112,17 @@ svg[class^= "svgtrans"] path {
 	stroke-linecap: round;
 	stroke-linejoin: round;
 	d: path("M2,2 L8,8");
-	animation: compression 1s linear alternate infinite;
+	-webkit-animation: compression 1s linear alternate infinite;
+	        animation: compression 1s linear alternate infinite;
+}
+
+@-webkit-keyframes compression {
+	from {
+		d: path("M2,2 L8,8");
+	}
+	to {
+		d: path("M5,5 L5,5");
+	}
 }
 
 @keyframes compression {
@@ -101,13 +139,32 @@ svg[class^= "svgtrans"] path {
 	stroke: #000;
 	stroke-linecap: round;
 	stroke-linejoin: round;
-	transform: none;
-	animation: rotation 1s linear infinite;
+	-webkit-transform: none;
+	        transform: none;
+	-webkit-animation: rotation 1s linear infinite;
+	        animation: rotation 1s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+	to {
+		-webkit-transform:	rotate(90deg) translate(0, -500%) 
+					rotate(90deg) translate(0, -500%) 
+					rotate(90deg) translate(0, -500%) 
+					rotate(90deg) translate(0, -500%);
+		        transform:	rotate(90deg) translate(0, -500%) 
+					rotate(90deg) translate(0, -500%) 
+					rotate(90deg) translate(0, -500%) 
+					rotate(90deg) translate(0, -500%);
+	}
 }
 
 @keyframes rotation {
 	to {
-		transform:	rotate(90deg) translate(0, -500%) 
+		-webkit-transform:	rotate(90deg) translate(0, -500%) 
+					rotate(90deg) translate(0, -500%) 
+					rotate(90deg) translate(0, -500%) 
+					rotate(90deg) translate(0, -500%);
+		        transform:	rotate(90deg) translate(0, -500%) 
 					rotate(90deg) translate(0, -500%) 
 					rotate(90deg) translate(0, -500%) 
 					rotate(90deg) translate(0, -500%);
