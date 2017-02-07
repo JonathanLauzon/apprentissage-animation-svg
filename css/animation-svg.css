@@ -1,0 +1,95 @@
+svg {
+  width: 90%;
+  height: 90%;
+}
+svg polyline,
+svg line,
+svg[class^="svgtrans"] path {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: 0.2s;
+}
+.svgtrans-1:hover path {
+  d: path("M8,2 L2,8");
+}
+.svgtrans-2:hover path {
+  d: path("M5,2 Q 8,5 5,8");
+}
+.svgtrans-3:hover path {
+  d: path("M2,2 L5,8 L8,2");
+}
+.svgtrans-4:hover path {
+  d: path("M2,2 Q2,8 8,8");
+}
+.svgtrans-5:hover path {
+  d: path("M2,2 Q5,16 8,2");
+}
+.svganim-1 {
+  stroke-dasharray: 2;
+  animation: tourniquet 5s linear infinite;
+}
+@keyframes tourniquet {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+.svganim-2 {
+  stroke-dasharray: 26;
+  stroke-dashoffset: 26;
+  animation: contour 5s linear alternate infinite;
+}
+@keyframes contour {
+  from {
+    stroke-dashoffset: 26;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.svganim-3 path {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  d: path("M2,2 L8,8");
+  animation: deplacement 1s linear alternate infinite;
+}
+@keyframes deplacement {
+  from {
+    d: path("M2,2 L8,8");
+  }
+  to {
+    d: path("M8,2 L2,8");
+  }
+}
+.svganim-4 path {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  d: path("M2,2 L8,8");
+  animation: compression 1s linear alternate infinite;
+}
+@keyframes compression {
+  from {
+    d: path("M2,2 L8,8");
+  }
+  to {
+    d: path("M5,5 L5,5");
+  }
+}
+.svganim-5 path {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: none;
+  animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+  to {
+    transform: rotate(90deg) translate(0, -500%) rotate(90deg) translate(0, -500%) rotate(90deg) translate(0, -500%) rotate(90deg) translate(0, -500%);
+  }
+}
